@@ -60,8 +60,8 @@ print(Fore.WHITE + "", end="")
 os.system("pause")
 fl=easygui.diropenbox()+"\\"
 numb=int(input("Enter the number of tests: "))
-start(numb)
 tet=int(input("Enter the number of lines for one input: "))
+start(numb)
 c=os.listdir()
 ind=0
 start_time = time.time()
