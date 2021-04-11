@@ -40,7 +40,7 @@ def start(tests):
 	f=open(f"{fl}input.txt")
 	a=f.readlines()
 	f.close()
-	if len(a)<tests:
+	if len(a)/tet<tests:
 		print(Fore.RED + "Not enough data in the input.txt")
 		print(Fore.WHITE + "", end="")
 		os.system("pause")
