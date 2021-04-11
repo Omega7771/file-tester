@@ -147,11 +147,11 @@ for g in range(0,len(c)):
 				ex.write(g+1, i+1, "Compilation error", err)
 		rus=round((res/numb)*100, 1)
 		if rus==100:
-			ex.write(g+1, numb+2, (int(rus), "%"), acc)
+			ex.write(g+1, numb+2, f"{int(rus)}%", acc)
 		elif rus!=0:
-			ex.write(g+1, numb+2, (int(rus), "%"), som)
+			ex.write(g+1, numb+2, f"{int(rus)}%", som)
 		else:
-			ex.write(g+1, numb+2, (int(rus), "%"), err)
+			ex.write(g+1, numb+2, f"{int(rus)}%", err)
 	except Exception as e:
 		f=open(f"output_{nam}_test_{i+1}.txt","w")
 		f.write("Compilation error")
@@ -178,3 +178,4 @@ os.remove("input.txt")
 d=input("Do you want open results?(Y/N): ")
 if d=="Y" or d=="y":
 	os.startfile("Results.xlsx")
+os.system("pause")
