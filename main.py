@@ -34,16 +34,19 @@ def inpt(numd):
 def start(tests):
 	if not os.path.exists(f"{fl}input.txt"):
 		print(Fore.RED + "File input.txt not found")
+		os.system("pause")
 		sys.exit(0)
 	f=open(f"{fl}input.txt")
 	a=f.readlines()
 	f.close()
 	if len(a)<tests:
 		print(Fore.RED + "Not enough data in the input.txt")
+		os.system("pause")
 		sys.exit(0)
 	for i in range(1,tests+1):
 		if not os.path.exists(f"{fl}output({i}).txt"):
 			print(Fore.RED + "Not enough outputs file")
+			os.system("pause")
 			sys.exit(0)
 print(Fore.GREEN + "Select directory with cpp files")
 print(Fore.WHITE + "", end="")
